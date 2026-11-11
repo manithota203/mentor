@@ -1,0 +1,183 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6fb;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Main Section */
+main {
+    width: 85%;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
+}
+
+section h2 {
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+section h3 {
+    color: #2563eb;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+section p {
+    line-height: 1.7;
+}
+
+/* Links and Buttons */
+section a {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+section a:hover {
+    background-color: #172554;
+}
+
+/* Footer */
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+
+/* Forms and Dashboard */
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ccc;
+}
+
+.container h1 {
+    color: #172554;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    color: #2563eb;
+    margin: 20px 0;
+}
+
+.container p {
+    line-height: 1.7;
+}
+
+/* Input Fields */
+input, textarea, select {
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+/* Buttons */
+button {
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+button:hover {
+    background: #172554;
+}
+
+/* Mentor Cards */
+.mentor-card {
+    background: #f4f6fb;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #2563eb;
+}
+
+.mentor-card h3 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+/* Links */
+.container a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 18px;
+    }
+}

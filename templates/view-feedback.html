@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback</title>
+    <style>
+        body {
+            background: #172554;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            color: #172554;
+            text-align: center;
+        }
+
+        .feedback {
+            background: #f1f5f9;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Feedback</h1>
+
+    {% for item in feedback_list %}
+        <div class="feedback">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.message }}</p>
+            <small>{{ item.created_at }}</small>
+        </div>
+    {% else %}
+        <p>No student feedback available yet.</p>
+    {% endfor %}
+
+    <br>
+    <a href="{{ url_for('mentor') }}">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

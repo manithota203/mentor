@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mentor Requests</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Mentor Requests</h1>
+
+        {% for req in requests %}
+
+        <div class="mentor-card">
+
+            <h3>{{ req['name'] }}</h3>
+
+            {% if req['email'] %}
+                <p>Email: {{ req['email'] }}</p>
+            {% endif %}
+
+            <p>Status: {{ req['status'] }}</p>
+
+            {% if session['role'] == 'mentor' and req['status'] == 'Pending' %}
+
+            <a href="{{ url_for('update_request', request_id=req['id'], action='Accepted') }}">
+                <button>Accept</button>
+            </a>
+
+            <a href="{{ url_for('update_request', request_id=req['id'], action='Rejected') }}">
+                <button>Reject</button>
+            </a>
+
+            {% endif %}
+
+        </div>
+
+        {% else %}
+
+        <p>No requests available.</p>
+
+        {% endfor %}
+
+        <br>
+
+        {% if session['role'] == 'mentor' %}
+            <a href="{{ url_for('mentor') }}">Back to Dashboard</a>
+        {% else %}
+            <a href="{{ url_for('student') }}">Back to Dashboard</a>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Digital Mentor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        body {
+            background-color: #172554;
+            color: #333;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-box {
+            background-color: white;
+            width: 400px;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 12px #ddd;
+        }
+
+        h1 {
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 13px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border: 2px solid #2563eb;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #172554;
+        }
+
+        .links {
+            margin-top: 22px;
+            line-height: 2;
+        }
+
+        .links a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .links a:hover {
+            color: #172554;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register-box">
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">
+            Join Digital Mentor-Mentee System
+        </p>
+
+        <form method="POST" action="/register">
+
+            <input type="text" name="name"
+            placeholder="Full Name" required>
+
+            <input type="email" name="email"
+            placeholder="Email Address" required>
+
+            <input type="password" name="password"
+            placeholder="Password" required>
+
+            <select name="role" required>
+                <option value="">Select Your Role</option>
+                <option value="mentor">Mentor</option>
+                <option value="mentee">Mentee</option>
+            </select>
+
+            <button type="submit">Create Account</button>
+
+        </form>
+
+        <div class="links">
+            <p>Already have an account?
+            <a href="/login">Login Here</a></p>
+
+            <a href="/">← Back to Home</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

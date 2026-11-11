@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mentor Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>My Mentor Profile</h1>
+    <p>Share your skills and experience with students.</p>
+</header>
+
+<main>
+    <section>
+
+        <h2>Update Your Details</h2>
+
+        {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endwith %}
+
+        <form method="POST">
+
+            <label>Skills</label>
+
+            <textarea name="skills" rows="3"
+                placeholder="Enter your skills..."
+                required>{{ mentor.skills or '' }}</textarea>
+
+            <label>About</label>
+
+            <textarea name="bio" rows="5"
+                placeholder="Write about yourself..."
+                required>{{ mentor.bio or '' }}</textarea>
+
+            <button type="submit">Save Profile</button>
+
+        </form>
+
+        <a href="{{ url_for('mentor') }}">Back to Dashboard</a>
+
+    </section>
+</main>
+
+<footer>
+    <p>Digital Mentor-Mentee System</p>
+    <p>Learn | Connect | Grow</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Mentor-Mentee System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Flask CSS Connection -->
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Digital Mentor-Mentee System</h1>
+        <p>Learn Together | Grow Together</p>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Welcome Section -->
+
+        <section class="welcome">
+
+            <h2>Welcome to Digital Mentor-Mentee System</h2>
+
+            <p>
+                Connect with experienced mentors and improve your skills.
+                Get proper guidance for your education and career.
+            </p>
+
+            <a href="{{ url_for('register') }}" class="btn">
+                Get Started
+            </a>
+
+            <a href="{{ url_for('login') }}" class="btn">
+                Login Now
+            </a>
+
+        </section>
+
+
+        <!-- About Section -->
+
+        <section id="about">
+
+            <h2>About Our System</h2>
+
+            <p>
+                Digital Mentor-Mentee System is a platform that connects
+                students with experienced mentors.
+
+                Students can find mentors, request guidance and
+                track their learning progress.
+            </p>
+
+        </section>
+
+
+        <!-- Services Section -->
+
+        <section class="services">
+
+            <h2>Our Services</h2>
+
+            <div class="service-card">
+
+                <h3>1. Find a Mentor</h3>
+                <p>Find mentors based on your skills and interests.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <h3>2. Get Guidance</h3>
+                <p>Receive guidance for education and career development.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <h3>3. Track Progress</h3>
+                <p>Monitor your learning progress and achievements.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <h3>4. Give Feedback</h3>
+                <p>Share your experience and feedback with mentors.</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Users Section -->
+
+        <section class="users">
+
+            <h2>Who Can Join?</h2>
+
+            <div class="user-card">
+
+                <h3>Students (Mentees)</h3>
+                <p>Students who need guidance and support.</p>
+
+                <a href="{{ url_for('register') }}">Join as Student</a>
+
+            </div>
+
+            <div class="user-card">
+
+                <h3>Mentors</h3>
+                <p>Experienced people who guide and support students.</p>
+
+                <a href="{{ url_for('register') }}">Join as Mentor</a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact Section -->
+
+        <section id="contact">
+
+            <h2>Contact Us</h2>
+
+            <p>Email: support@mentor.com</p>
+            <p>Phone: 9876543210</p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Digital Mentor-Mentee System</p>
+        <p>Learn Together | Grow Together</p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Progress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>My Learning Progress</h1>
+
+        <h2>Add New Task</h2>
+
+        <form method="POST" action="{{ url_for('progress_page') }}">
+
+            <input type="text" name="task"
+                   placeholder="Enter your learning task" required>
+
+            <button type="submit">Add Task</button>
+
+        </form>
+
+        <h2>My Tasks</h2>
+
+        {% for item in progress_items %}
+
+        <div class="mentor-card">
+
+            <p>{{ item['task'] }}</p>
+
+            {% if item['completed'] == 1 %}
+
+                <p>Completed ✓</p>
+
+            {% else %}
+
+                <p>Pending</p>
+
+                <a href="{{ url_for('complete_task', task_id=item['id']) }}">
+                    <button>Mark as Completed</button>
+                </a>
+
+            {% endif %}
+
+        </div>
+
+        {% else %}
+
+            <p>No tasks added yet.</p>
+
+        {% endfor %}
+
+        <br>
+
+        <a href="{{ url_for('student') }}">Back to Dashboard</a>
+
+    </div>
+
+</body>
+</html>
+```
